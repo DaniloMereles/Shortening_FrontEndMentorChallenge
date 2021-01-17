@@ -1,0 +1,169 @@
+.main{
+    width: 100%;
+    height: 850px;
+    background-color: var(--Main-bg);
+    display: flex;
+    justify-content: center;
+    z-index: 3000;
+    overflow: hidden;
+    .main__container{
+        width: 100%;
+        height: 700px;
+        max-width: 1200px;
+        margin-top: 130px;
+        z-index: 3000;
+        .main__cards{
+            width: 100%;
+            height: 100%;
+            z-index: 2000;
+            .main__cards-texts{
+                width: 100%;
+                height: 150px;
+                text-align: center;
+                margin-bottom: 50px;
+                .title{
+                    font-size: 40px;
+                    color: var(--DarkViolet);
+                    margin: 5px;
+                }
+
+                .texts{
+                    width: 45%;
+                    font-size: 18px;
+                    color: var(--GrayishViolet);
+                    margin: 10px auto;
+                }
+            }
+
+            .main__cards-card-Content{
+                width: 100%;
+                height: 550;
+                max-width: 1200px;
+                margin: 10px auto;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                z-index: 1000;
+                .card{
+                    width: 30%;
+                    height: 250px;
+                    padding: 10px;
+                    margin: 10px;
+                    background-color: var(--White);
+                    border-radius: 7px;
+                    position: relative;
+                    z-index: 1000;
+                    .card__img{
+                        width: 80px;
+                        height: 80px;
+                        background-color: var(--DarkViolet);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        padding: 10px;
+                        position: absolute;
+                        top: -45px;
+                        left: 20px;
+                    }
+
+                    .card__title{
+                        color: var(--VeryDarkBlue);
+                        font-size: 22px;
+                        margin-top: 40px;
+                        margin-left: 10px;
+                    }
+
+                    .card__texts-description{
+                        color: var(--GrayishViolet);
+                        width: 90%;
+                        font-size: 15px;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                        line-height: 25px;
+                    }
+                }
+
+                .card-2{
+                    transform: translateY(40px);
+                }
+
+                .card-3{
+                    transform: translateY(70px);
+                }
+            }
+
+            .main__cards-card-Content::before{
+                content: '';
+                width: 100%;
+                max-width: 90%;
+                height: 7px;
+                background-color: var(--Cyan);
+                z-index: 0;
+                transform: translateY(135px);
+            }
+        }
+    }
+}
+
+@media(max-width: 600px){
+    .main{
+        width: 100%;
+        height: 1280px;
+        overflow: hidden;
+        .main__container{
+            width: 100%;
+            height: 900px;
+            max-width: 600px;
+            margin-top: 180px;
+            .main__cards{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .main__cards-texts{
+                    .title{
+                        font-size: 30px;
+                    }
+
+                    .texts{
+                        width: 70%;
+                        font-size: 14px;
+                    }
+                }
+                .main__cards-card-Content{
+                    width: 100%;
+                    max-width: 600px;
+                    display: flex;
+                    flex-direction: column;
+                    .card{
+                        width: 70%;
+                        height: 240px;
+                        margin: 20px;
+                        .card__img{
+                            width: 75px;
+                            height: 75px;
+                            left: 35%;
+                            top: -40px;
+                        }
+
+                        .card__title{
+                            text-align: center;
+                            font-size: 20px;
+                        }
+
+                        .card__texts-description{
+                            text-align: center;
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .main__cards-card-Content::before{
+                    display: none;
+                }
+            }
+        }
+    }
+}

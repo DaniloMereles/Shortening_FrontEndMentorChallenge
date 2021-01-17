@@ -1,0 +1,104 @@
+.footer{
+    width: 100%;
+    height: 270px;
+    padding: 20px;
+    background-color: var(--VeryDarkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .footer__container{
+        width: 100%;
+        max-width: 1200px;
+        height: 90%;
+        margin: 10px auto;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .footer__logo{
+            width: 400px;
+            height: 100%;
+        }
+
+        .footer__links{
+            width: 400px;
+            height: 100%;
+            display: flex;
+            .footer__links-box{
+                margin-left: 10px;
+                .link{
+                    display: inline-block;
+                    color: var(--White);
+                    margin: 5px;
+                    font-size: 15px;
+                }
+
+                .link.title{
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .footer__social-media{
+            width: 400px;
+            height: 100%;
+            i{
+                color: var(--White);
+                font-size: 30px;
+                margin-left: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media(max-width: 500px){
+    .footer{
+        width: 100%;
+        height: 600px;
+        .footer__container{
+            width: 100%;
+            max-width: 600px;
+            height: 90%;
+            margin: 5px auto;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .footer__logo, .footer__links, .footer__social-media{
+                margin: 10px;
+            }
+
+            .footer__logo{
+                width: 200px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .footer__links{
+                width: 200px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                .footer__links-box{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+
+            .footer__social-media{
+                width: 200px;
+                height: 100%;
+                i{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
